@@ -13,6 +13,7 @@ class TfTestCase(unittest.TestCase):
     def setUp(self):
         self.sess = tf.Session()
         self.sess.__enter__()
+        # self.sess.run(tf.global_variables_initializer())
 
     def tearDown(self):
         self.sess.close()
